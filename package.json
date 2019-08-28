@@ -1,0 +1,24 @@
+{
+  "name": "bankkatanode",
+  "version": "1.0.0",
+  "description": "bank kata in node",
+  "main": "dist/app.js",
+  "scripts": {
+    "start": "tsc && node dist/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AurelijaZuba/bankkatanode.git"
+  },
+  "author": "Aurelija",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AurelijaZuba/bankkatanode/issues"
+  },
+  "homepage": "https://github.com/AurelijaZuba/bankkatanode#readme",
+  "devDependencies": {
+    "tslint": "^5.19.0",
+    "typescript": "^3.5.3"
+  }
+}
