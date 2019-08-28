@@ -1,5 +1,5 @@
 export class TransactionsRepository {
-    deposit(){
+    public deposit(sum: number) {
         throw new Error("Unsupported");
     }
 }

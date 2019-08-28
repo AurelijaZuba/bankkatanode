@@ -3,12 +3,13 @@ import {MockConsole} from "./mockConsole";
 import {TransactionsRepository} from "./transactionsRepository";
 
 export class BankAccount implements IAccountService {
+    private transactions: TransactionsRepository;
     constructor(console: MockConsole, transactions: TransactionsRepository) {
-
+        this.transactions = transactions;
     }
 
     public deposit(sum: number) {
-        throw new Error("Unsupported");
+        this.transactions.deposit(sum);
     }
 
     public withdraw(sum: number) {
