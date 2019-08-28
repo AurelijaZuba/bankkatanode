@@ -1,12 +1,14 @@
 import {BankAccount} from "../bankAccount";
 import {MockConsole} from "../mockConsole";
+import {TransactionsRepository} from "../transactionsRepository";
 
 jest.mock("../mockConsole");
 
 describe("Bank Kata", () => {
     it("should display account statement", () => {
         const consoleMock = new MockConsole();
-        const bankAccount = new BankAccount(consoleMock);
+        const transactions = new TransactionsRepository();
+        const bankAccount = new BankAccount(consoleMock, transactions);
 
         bankAccount.deposit(1000);
         bankAccount.deposit(2000);

@@ -1,9 +1,9 @@
 import {IAccountService} from "./IAccountService";
 import {MockConsole} from "./mockConsole";
-import {throws} from "assert";
+import {TransactionsRepository} from "./transactionsRepository";
 
 export class BankAccount implements IAccountService {
-    constructor(console: MockConsole) {
+    constructor(console: MockConsole, transactions: TransactionsRepository) {
 
     }
 

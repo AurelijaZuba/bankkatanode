@@ -7,13 +7,12 @@ jest.mock("../transactionsRepository");
 
 describe("Bank Account", () => {
     it("should deposit a sum of 100", () => {
-        let consoleMock = new MockConsole();
-        const bankAccount = new BankAccount(consoleMock);
-        let amount = 100;
-        bankAccount.deposit(amount);
+        const consoleMock = new MockConsole();
+        const transactions = new TransactionsRepository();
+        const bankAccount = new BankAccount(consoleMock, transactions);
+        const amount = 100;
 
-        let transactions = new TransactionsRepository();
+        bankAccount.deposit(amount);
         expect(transactions.deposit).toBeCalledWith(amount);
     });
-}
-)
+});
